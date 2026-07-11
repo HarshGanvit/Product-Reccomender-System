@@ -12,10 +12,13 @@ import numpy as np
 
 
 st.set_page_config(layout="wide")
-with open('data.pkl', 'rb') as f:
-    data = pickle.load(f)
+@st.cache_data
+def load_data():
+    with open('data.pkl', 'rb') as f:
+        data = pickle.load(f)
 
-df = pd.read_csv('amazon.csv')
+        df = pd.read_csv('amazon.csv')
+load_data()
 
 def get_image(link):
     headers = {
