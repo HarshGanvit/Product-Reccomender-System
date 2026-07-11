@@ -18,7 +18,8 @@ def load_data():
         data = pickle.load(f)
 
     df = pd.read_csv('amazon.csv')
-load_data()
+    return df,data
+df,data = load_data()
 
 def get_image(link):
     headers = {
