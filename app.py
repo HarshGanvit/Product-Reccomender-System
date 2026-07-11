@@ -17,7 +17,7 @@ def load_data():
     with open('data.pkl', 'rb') as f:
         data = pickle.load(f)
 
-        df = pd.read_csv('amazon.csv')
+    df = pd.read_csv('amazon.csv')
 load_data()
 
 def get_image(link):
